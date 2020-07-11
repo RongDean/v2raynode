@@ -2,11 +2,9 @@ version: '2'
 
 services:
   v2ray:
-    image: woaizyg/rico-free:v2ray
+    image: hulisang/v2ray_v3:go
     restart: always
     network_mode: "host"
-    extra_hosts:
-      auth.rico93.com: 127.0.0.1
     environment:
       sspanel_url: "https://xxxx"
       key: "xxxx"
@@ -25,7 +23,7 @@ services:
       PANELTYPE: 0
       usemysql: 0
       CF_Key: "bbbbbbbbbbbbbbbbbb"
-      CF_Email: "getbackcn@gmail.com"
+      CF_Email: "rico93@outlxxxxxxxxxx.com"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -34,7 +32,7 @@ services:
         max-file: "3"
 
   caddy:
-    image: woaizyg/rico-free:caddy
+    image: hulisang/v2ray_v3:caddy
     restart: always
     environment:
       - ACME_AGREE=true
